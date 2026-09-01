@@ -21,3 +21,16 @@ Charges vary widely across individuals, and features like smoking status, BMI, a
 Standalone regression pipeline for `insurance.csv` (target: `charges`), covering EDA, feature engineering, preprocessing, model selection, and evaluation in one notebook.
 
 Run `uv sync`, then `uv run jupyter lab` and open `insurance_regression_pipeline.ipynb`.
+
+Each run saves `best_model.pkl`, `pipeline.pkl`, `metadata.json`, and
+`model_card.json` (model details, intended use, metrics, limitations) to a
+timestamped folder under `models/`.
+
+## Try it
+
+`app.py` is a Gradio UI that loads the most recently trained model from
+`models/` and serves live predictions:
+
+```
+uv run python app.py
+```

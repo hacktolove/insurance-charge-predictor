@@ -5,6 +5,7 @@ description = "A tabular regression pipeline that works on any CSV"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "gradio>=6.26.0",
     "ipykernel>=6.29.0",
     "joblib>=1.5.3",
     "jupyter>=1.1.1",
